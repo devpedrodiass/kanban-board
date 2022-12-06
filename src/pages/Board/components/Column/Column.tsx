@@ -26,7 +26,7 @@ export default function ColumnComponent(props: ColumnProps) {
 
   const segmentedCards = () => {
     return cards.filter(
-      (card) => card.columnId === id && card.title.includes(search)
+      (card) => card.columnId === id && card.title.toLowerCase().includes(search.toLowerCase())
     )
   }
 
